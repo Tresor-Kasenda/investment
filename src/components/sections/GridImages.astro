@@ -1,0 +1,42 @@
+---
+import Image from "../cards/Image.astro";
+interface images {
+    src: string;
+    alt: string;
+}
+
+const images: images[] = [
+    {
+        src: "/images/roosters/0.jpg",
+        alt: "image"
+    },
+    {
+        src: "/images/roosters/2.JPG",
+        alt: "image"
+    },
+    {
+        src: "/images/roosters/3.JPG",
+        alt: "image"
+    },
+    {
+        src: "/images/roosters/4.JPG",
+        alt: "image"
+    },
+    {
+        src: "/images/roosters/5.JPG",
+        alt: "image"
+    },
+    {
+        src: "/images/roosters/6.JPG",
+        alt: "image"
+    },
+]
+---
+<div class="mx-auto max-w-6xl">
+    <div class="columns-3 gap-x-8 pt-2">
+        { images.map((image) => (
+            <Image src={image.src} alt={image.alt} />
+        )) }
+    </div>
+
+</div>
