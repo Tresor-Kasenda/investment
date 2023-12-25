@@ -45,10 +45,11 @@ const { title } = Astro.props;
     <meta property="og:image" content="/images/og/logo.png">
     <meta name="twitter:image" content="/images/og/logo.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,800;0,9..40,900;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,600&family=Open+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto+Slab:wght@100;200;300;500;600;700;800;900&display=swap"
+        rel="stylesheet">
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body" style="scroll-behavior:smooth;">
     <Navbar />
@@ -56,14 +57,14 @@ const { title } = Astro.props;
     <Footer />
   </body>
   <script>
-    const switchTheme = document.querySelector(
-      "[data-switch-theme]"
-    ) as HTMLButtonElement;
+    const switchTheme = document.querySelector("[data-switch-theme]") as HTMLButtonElement;
 
     if (
-      localStorage.getItem("appTheme") === "dark" ||
-      (!("appTheme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
+        localStorage.getItem("appTheme") === "dark" ||
+        (
+            !("appTheme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+        )
     ) {
       document.documentElement.classList.add("dark");
     } else {
@@ -96,41 +97,9 @@ const { title } = Astro.props;
     }
   </script>
   <script>
-    window.addEventListener('scroll', e => {
-      const header = document.querySelector('#header_')
-      e.preventDefault()
-      header.classList.toggle('sticky-nav', window.scrollY > 0);
-    })
-
-    const toggleMobileMenu = document.querySelector('#hamburger')
-    const navbar = document.querySelector('#navbar')
-
-    toggleMobileMenu.addEventListener('click', e => {
-      e.preventDefault()
-      toggleMobileMenu.querySelector('#line').classList.toggle('rotate-45')
-      toggleMobileMenu.querySelector('#line').classList.toggle('translate-y-1.5')
-
-      toggleMobileMenu.querySelector('#line2').classList.toggle('-rotate-45')
-      toggleMobileMenu.querySelector('#line2').classList.toggle('-translate-y-1')
-      if (navbar.clientHeight === 0) {
-        navbar.style.paddingTop = '20px'
-        navbar.style.paddingBottom = '20px'
-        navbar.style.height = `${parseInt(navbar.scrollHeight) + 60}px`
-        return
-      }
-      navbar.style.height = '0px'
-      navbar.style.paddingTop = '0px'
-      navbar.style.paddingBottom = '0px'
-    })
-  </script>
-  <script>
-    const toggleMenu = document.querySelector(
-      "[data-toggle-nav]"
-    ) as HTMLButtonElement;
+    const toggleMenu = document.querySelector("[data-toggle-nav]") as HTMLButtonElement;
     const navbar = document.querySelector("[data-navbar]") as HTMLDivElement;
-    const overlayNav = document.querySelector(
-      "[data-nav-overlay]"
-    ) as HTMLDivElement;
+    const overlayNav = document.querySelector("[data-nav-overlay]") as HTMLDivElement;
     if (toggleMenu) {
       toggleMenu.addEventListener("click", (e) => {
         e.preventDefault();
@@ -139,15 +108,12 @@ const { title } = Astro.props;
           overlayNav.setAttribute("data-is-visible", "true");
           document.body.classList.add("!overflow-y-hidden");
 		  navbar.style.height = `${navbar.scrollHeight}px`
-
         }else{
 			toggleMenu.setAttribute("data-open-nav", "false");
         	overlayNav.setAttribute("data-is-visible", "false");
         	document.body.classList.remove("!overflow-y-hidden");
 		  	navbar.style.height = "0px"
 		}
-		
-        
       });
 
       overlayNav.addEventListener("click", (e) => {
@@ -219,7 +185,7 @@ const { title } = Astro.props;
     scroll-behavior: smooth;
   }
   body {
-    font-family: "Raleway", sans-serif;
+    font-family: 'DM Sans', sans-serif;
   }
 
   [data-toggle-nav][data-open-nav="true"] #line1 {
@@ -232,15 +198,6 @@ const { title } = Astro.props;
   [data-toggle-nav][data-open-nav="true"] #line3 {
     transform: translateY(-0.375rem) rotate(-40deg);
   }
-
-  button[data-toggle-navbar][data-is-open="true"] #line-1 {
-    transform: rotate(45deg) translateY(0.375rem);
-  }
-
-  button[data-toggle-navbar][data-is-open="true"] #line-2 {
-    transform: rotate(-45deg) translateY(-0.375rem);
-  }
-
   
   [data-nav-overlay][data-is-visible="true"] {
     visibility: visible;

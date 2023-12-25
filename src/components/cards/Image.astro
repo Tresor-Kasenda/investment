@@ -6,7 +6,7 @@ export interface image {
 const { src, alt } = Astro.props;
 ---
 <figure class="group py-5 [break-inside:avoid]">
-    <img class="rounded-md w-full h-80 object-cover object-top transition-all duration-500 group-hover:rounded-xl"
+    <img class="rounded-md w-full h-80 object-cover transition-all duration-500 group-hover:rounded-xl"
          src={src}
          alt={alt}>
 </figure>

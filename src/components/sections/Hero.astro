@@ -1,126 +1,53 @@
 ---
-import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
-import ByNumber from "./ByNumber.astro";
 
 ---
-<section class="py-4 mt-14 sm:mt16 lg:mt-0">
-    <div class="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 grid lg:grid-cols-2 lg:items-center gap-10">
+<section class="py-4 mt-16 sm:mt16 lg:mt-10">
+    <div class="mx-auto lg:max-w-6xl w-full px-5 sm:px-10 md:px-12 lg:px-5 grid lg:grid-cols-2 lg:items-center gap-10">
         <div class="flex flex-col space-y-8 sm:space-y-10 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto">
-            <h1 class=" font-semibold leading-tight text-teal-950 dark:text-white text-4xl sm:text-5xl lg:text-6xl">
-                We'll be happy to take care of <span class="text-transparent bg-clip-text bg-gradient-to-tr from-pink-700 to-orange-800">your work.</span>
+            <h1 class=" font-semibold leading-tight text-teal-950 dark:text-white text-3xl sm:text-4xl lg:text-5xl">
+                We'll be happy to take care of
+                <span class="text-transparent bg-clip-text bg-gradient-to-tr from-pink-700 to-orange-800">your work.</span>
             </h1>
-            <p class=" flex text-gray-700 dark:text-gray-300 tracking-tight md:font-normal max-w-xl mx-auto lg:max-w-none">
+            <p class="flex text-gray-700 dark:text-gray-300 lg:leading-loose leading-none tracking-tight md:font-normal text-base max-w-xl mx-auto lg:max-w-none">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem molestiae soluta ipsa
                 incidunt expedita rem! Suscipit molestiae voluptatem iure, eum alias nobis velit quidem
                 reiciendis saepe nostrum
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
-                <a href="#"
-                   class="px-6 items-center h-12 rounded-3xl bg-pink-600 text-white duration-300 ease-linear flex justify-center w-full sm:w-auto">
+            <div class=" flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
+                <a href="#" class="px-6 text-sm font-medium items-center h-12 rounded-3xl bg-pink-600 text-white duration-300 ease-linear flex justify-center w-full sm:w-auto">
                     Get started
                 </a>
-                <a href="#"
-                   class="px-6 items-center h-12 rounded-3xl text-pink-700 border border-gray-100 dark:border-gray-800 dark:text-white bg-gray-100 dark:bg-gray-900 duration-300 ease-linear flex justify-center w-full sm:w-auto">
+                <a href="#" class="group/a px-6 text-sm font-medium items-center h-12 rounded-3xl text-pink-700 border border-gray-100 dark:border-gray-800 dark:text-white bg-gray-100 dark:bg-gray-900 duration-300 ease-linear flex justify-center w-full sm:w-auto">
                     Book a call
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="group-hover/a:translate-x-2 h-4 w-4 translate-x-1 duration-300">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
                 </a>
             </div>
             <div class="mt-5 flex items-center justify-center flex-wrap gap-4 lg:justify-start w-full">
                 <a href="#" target="_blank">
-                    <span class="sr-only">org name</span>
                     <img src={"/logos/kamoto.png"} alt="client name" class="h-10 w-auto dark:grayscale">
                 </a>
                 <a href="#" target="_blank">
-                    <span class="sr-only">org name</span>
                     <img src={"/logos/mkk.png"} alt="client name" class="h-10 w-auto dark:grayscale">
                 </a>
                 <a href="#" target="_blank">
-                    <span class="sr-only">org name</span>
                     <img src={"/logos/mumi.png"} alt="client name" class="h-10 w-auto dark:grayscale">
                 </a>
                 <a href="#" target="_blank">
-                    <span class="sr-only">org name</span>
                     <img src={"/logos/rawbank.png"} alt="client name" class="h-10 w-auto dark:grayscale">
                 </a>
             </div>
         </div>
         <div class="flex aspect-square lg:aspect-auto lg:h-[35rem] relative">
             <div class="w-3/5 h-[80%] rounded-3xl overflow-clip border-8 border-gray-200 dark:border-gray-950 z-30">
-                <img src="/images/buildingImg.jpg" alt="buildind plan image" width="300"
+                <img src={'/images/roosters/5.webp'} alt="buildind plan image" width="300"
                      class="w-full h-full object-cover z-30" />
             </div>
-            <div
-                    class="absolute right-0 bottom-0 h-[calc(100%-50px)] w-4/5 rounded-3xl overflow-clip border-4 border-gray-200 dark:border-gray-800 z-10">
-                <img src="/images/working-on-housing-project.jpg" alt="working-on-housing-project"
+            <div class="absolute right-0 bottom-0 h-[calc(100%-50px)] w-4/5 rounded-3xl overflow-clip border-4 border-gray-200 dark:border-gray-800 z-10">
+                <img src={'/images/roosters/banner.webp'} alt="working-on-housing-project"
                      width="300" class="z-10 w-full h-full object-cover" />
             </div>
         </div>
     </div>
 </section>
-
-<!--<div class="relative">-->
-
-<!--    <img class="absolute inset-0 w-full h-full object-cover object-top" src={"/images/pexels.webp"} width="400" height="500" alt="hero background image">-->
-<!--    <div aria-hidden="true" class="absolute inset-0 w-full h-full bg-purple-900 bg-opacity-30 backdrop-blur-sm"></div>-->
-<!--    <div class="relative container m-auto px-6 md:px-12 lg:px-6">-->
-<!--        <div class="mb-12 pt-40 space-y-16 md:mb-20 md:pt-56 lg:w-8/12 lg:mx-auto">-->
-<!--            <h1 class="text-white text-center text-3xl font-bold sm:text-4xl md:text-5xl">-->
-<!--                Don't look again for your next freelance projects, you got them.-->
-<!--            </h1>-->
-
-<!--            <form action="" class="w-full">-->
-<!--                <div class="relative flex p-1 rounded-xl bg-white shadow-2xl md:p-2">-->
-<!--                    <div id="catJobBox" class="hidden text-gray-600 relative md:flex justify-between items-center min-w-max select-none">-->
-<!--                        <input type="checkbox" name="" id="toggleJobLstCat" class="peer hidden outline-none">-->
-<!--                        <input type="text" name="" id="catJobName" value="Design" class="pl-3 w-full bg-white text-base font-medium cursor-pointer" readonly>-->
-<!--                        <label for="toggleJobLstCat" class="absolute top-0 left-0 w-full h-full"></label>-->
-<!--                        <span class="min-w-max">-->
-<!--                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">-->
-<!--                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />-->
-<!--                            </svg>-->
-<!--                        </span>-->
-<!--                        <div id="catJobLst" class="absolute transition-all duration-500 ease-in-out translate-y-10 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible peer-checked:translate-y-1 top-full left-0 w-full bg-white bg-opacity-80 rounded-lg py-2">-->
-<!--                            <ul class="flex flex-col w-full">-->
-<!--                                <li class="cursor-default transition hover:bg-gray-100 hover:bg-opacity-80 flex px-5 py-2">Design</li>-->
-<!--                                <li class="cursor-default transition hover:bg-gray-100 hover:bg-opacity-80 flex px-5 py-2">Development</li>-->
-<!--                                <li class="cursor-default transition hover:bg-gray-100 hover:bg-opacity-80 flex px-5 py-2">Marketing</li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <input placeholder="Your favorite position" class="w-full p-4 outline-none text-gray-600" type="text">-->
-<!--                    <button type="button" title="Start buying" class="ml-auto py-3 px-6 rounded-lg text-center transition bg-gradient-to-br from-pink-500 to-purple-500 hover:to-purple-600 active:from-pink-700 focus:from-pink-600 md:px-12">-->
-<!--                        <span class="hidden text-white font-semibold md:block">-->
-<!--                            Search-->
-<!--                        </span>-->
-<!--                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 mx-auto text-white md:hidden" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">-->
-<!--                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>-->
-<!--                        </svg>-->
-<!--                    </button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-
-<!--        <div class="pb-16">-->
-<!--            <div class="md:px-12">-->
-<!--                <span class="block text-center font-medium text-pink-50">Trusted by your favorite giants</span>-->
-<!--                <div class="mt-8 -mx-6 px-6 overflow-x-auto md:overflow-x-hidden">-->
-<!--                    <div class="w-max flex justify-center flex-wrap items-center gap-4 md:w-auto md:gap-6 lg:gap-8">-->
-<!--                        <div class="flex items-center">-->
-<!--                            <img class="w-36 grayscale contrast-200 brightness-200" src={"/logos/kamoto.png"} alt="client logo" loading="lazy" width="100" height="122">-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center">-->
-<!--                            <img class="w-28 grayscale contrast-200 brightness-200" src={"/logos/mkk.png"} alt="client logo" loading="lazy" width="100" height="219">-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center">-->
-<!--                            <img class="w-32 grayscale contrast-200 brightness-200" src={"/logos/mumi.png"} alt="client logo" loading="lazy" width="100" height="219">-->
-<!--                        </div>-->
-<!--                        <div class="flex items-center">-->
-<!--                            <img class="w-24 grayscale contrast-200 brightness-200" src={"/logos/rawbank.png"} alt="client logo" loading="lazy" width="100" height="219">-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--</div>-->
