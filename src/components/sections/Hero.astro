@@ -1,53 +1,82 @@
 ---
-
+import {GalleryImages} from "../../data/GalleryImages";
 ---
-<section class="py-4 mt-16 sm:mt16 lg:mt-10">
-    <div class="mx-auto lg:max-w-6xl w-full px-5 sm:px-10 md:px-12 lg:px-5 grid lg:grid-cols-2 lg:items-center gap-10">
-        <div class="flex flex-col space-y-8 sm:space-y-10 lg:items-center text-center lg:text-left max-w-2xl md:max-w-3xl mx-auto">
-            <h1 class=" font-semibold leading-tight text-teal-950 dark:text-white text-3xl sm:text-4xl lg:text-5xl">
-                We'll be happy to take care of
-                <span class="text-transparent bg-clip-text bg-gradient-to-tr from-pink-700 to-orange-800">your work.</span>
-            </h1>
-            <p class="flex text-gray-700 dark:text-gray-300 lg:leading-loose leading-none tracking-tight md:font-normal text-base max-w-xl mx-auto lg:max-w-none">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem molestiae soluta ipsa
-                incidunt expedita rem! Suscipit molestiae voluptatem iure, eum alias nobis velit quidem
-                reiciendis saepe nostrum
-            </p>
-            <div class=" flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
-                <a href="#" class="px-6 text-sm font-medium items-center h-12 rounded-3xl bg-pink-600 text-white duration-300 ease-linear flex justify-center w-full sm:w-auto">
-                    Get started
-                </a>
-                <a href="#" class="group/a px-6 text-sm font-medium items-center h-12 rounded-3xl text-pink-700 border border-gray-100 dark:border-gray-800 dark:text-white bg-gray-100 dark:bg-gray-900 duration-300 ease-linear flex justify-center w-full sm:w-auto">
-                    Book a call
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="group-hover/a:translate-x-2 h-4 w-4 translate-x-1 duration-300">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </a>
-            </div>
-            <div class="mt-5 flex items-center justify-center flex-wrap gap-4 lg:justify-start w-full">
-                <a href="#" target="_blank">
-                    <img src={"/logos/kamoto.png"} alt="client name" class="h-10 w-auto dark:grayscale">
-                </a>
-                <a href="#" target="_blank">
-                    <img src={"/logos/mkk.png"} alt="client name" class="h-10 w-auto dark:grayscale">
-                </a>
-                <a href="#" target="_blank">
-                    <img src={"/logos/mumi.png"} alt="client name" class="h-10 w-auto dark:grayscale">
-                </a>
-                <a href="#" target="_blank">
-                    <img src={"/logos/rawbank.png"} alt="client name" class="h-10 w-auto dark:grayscale">
-                </a>
+<section class="relative py-4">
+    <div class="splide absolute z-6" aria-label="Splide Basic HTML Example">
+        <div class="splide__track h-max min-h-max">
+            <ul class="splide__list cursor-grab active:cursor-grabbing select-none children:select-none">
+                {
+                    GalleryImages.map((image) => (
+                        <li class="splide__slide">
+                           <img
+                              src={image.src}
+                              class="inset-0 object-cover object-center"
+                              alt={image.alt}
+                              width="800"
+                              height="400"
+                           />
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+    <div aria-hidden="true" class="absolute inset-0 w-full h-full bg-slate-800 bg-opacity-70 backdrop-blur-sm"></div>
+    <div class="relative container m-auto">
+        <div class="mx-auto lg:max-w-6xl w-full px-5 sm:px-10 md:px-12 lg:px-5 py-[7%]">
+            <div class="text-center flex flex-col items-center space-y-10">
+                <h1 class="text-5xl text-white font-bold md:text-5xl lg:text-6xl/tight xl:text-7xl/tight  dark:text-white max-w-4xl capitalize">
+                    We inspire Growth for your business brand
+                </h1>
+                <p class="text-lg text-white font-semibold dark:text-gray-300 text-center max-w-xl">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique deleniti earum, qui odio,
+                    dolorum labore incidunt ad ab porro, provident excepturi molestiae corporis molestias nam accusamus.
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="#" class="px-8 h-12 text-sm rounded-full flex items-center gap-x-3 bg-red-600 text-white hover:before:scale-105 before:hover:transition before:duration-100 active:duration-75 active:before:scale-95">
+                        Let's talk
+                    </a>
+                    <a href="#" class="font-semibold text-sm text-white leading-6">
+                        Learn more <span aria-hidden="true">→</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="flex aspect-square lg:aspect-auto lg:h-[35rem] relative">
-            <div class="w-3/5 h-[80%] rounded-3xl overflow-clip border-8 border-gray-200 dark:border-gray-950 z-30">
-                <img src={'/images/roosters/5.webp'} alt="buildind plan image" width="300"
-                     class="w-full h-full object-cover z-30" />
+        <div class="mt-12 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 pb-3">
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src={'/logos/kamoto.png'} class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="">
             </div>
-            <div class="absolute right-0 bottom-0 h-[calc(100%-50px)] w-4/5 rounded-3xl overflow-clip border-4 border-gray-200 dark:border-gray-800 z-10">
-                <img src={'/images/roosters/banner.webp'} alt="working-on-housing-project"
-                     width="300" class="z-10 w-full h-full object-cover" />
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src={'/logos/mkk.png'} class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="">
+            </div>
+            <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+                <img src={'/logos/mumi.png'} class="h-9 w-auto m-auto" loading="lazy" alt="client logo" width="" height="">
+            </div>
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src={'/logos/rawbank.png'} class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="">
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    import "@splidejs/splide/css";
+    import Splide from "@splidejs/splide";
+    document.addEventListener("DOMContentLoaded", function () {
+        const splide = new Splide(".splide", {
+            type: "loop",
+            focus: "center",
+            padding: "10px",
+            gap:"4px",
+            autoWidth: true,
+            arrows:false,
+            autoplay: true,
+        });
+
+        splide.on("pagination:mounted", function (data) {
+            data.list.classList.remove("splide__pagination--ltr");
+            data.list.classList.remove("splide__pagination");
+        });
+        splide.mount();
+    });
+</script>

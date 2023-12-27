@@ -1,98 +1,112 @@
 ---
-import Service from "../cards/Service.astro";
-import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
-import Title from "../shared/Title.astro";
 
 ---
 
 <section id="services">
 
-    <div class="py-16">
+    <div class="py-14">
         <div class="mb-16">
-            <h2 class="mb-4 text-center text-3xl font-bold text-gray-800 dark:text-white md:text-4xl">
+            <h2 class="mb-4 text-center text-5xl font-bold text-gray-800 dark:text-white md:text-6xl">
                 Nos services
             </h2>
-            <p class="text-center text-sm font-medium leading-relaxed text-gray-600 dark:text-gray-300 lg:mx-auto lg:w-8/12">
+            <p class="text-center text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-300 lg:mx-auto lg:w-8/12">
                 Voici les services que nous proposons à nos clients.
             </p>
         </div>
         <div class="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
             <div class="grid gap-12 md:gap-6 md:grid-cols-3 lg:gap-12">
                 <div class="group space-y-6">
-                    <img
-                            src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-                            alt="art cover"
-                            loading="lazy"
-                            width="1000"
-                            height="667"
-                            class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
-                    />
+                    <div class="overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+                                alt="art cover"
+                                loading="lazy"
+                                width="1000"
+                                height="667"
+                                class="h-80 w-full rounded-3xl object-cover object-top dark:grayscale dark:hover:grayscale-0 ease-linear hover:scale-105 transition-all duration-500 group-hover:rounded-xl"
+                        />
+                    </div>
+
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
                         Ingénierie, construction et mise en service
                     </h3>
                 </div>
                 <div class="group space-y-6">
-                    <img
-                            src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-                            alt="art cover"
-                            loading="lazy"
-                            width="1000"
-                            height="667"
-                            class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
-                    />
+                    <div class="overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+                                alt="art cover"
+                                loading="lazy"
+                                width="1000"
+                                height="667"
+                                class="h-80 w-full rounded-3xl object-cover object-top dark:grayscale dark:hover:grayscale-0 ease-linear hover:scale-105 transition-all duration-500 group-hover:rounded-xl"
+                        />
+                    </div>
+
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
                         Maintenance Services
                     </h3>
                 </div>
                 <div class="group space-y-6">
-                    <img
-                            src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-                            alt="art cover"
-                            loading="lazy"
-                            width="1000"
-                            height="667"
-                            class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
-                    />
+                    <div class="overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+                                alt="art cover"
+                                loading="lazy"
+                                width="1000"
+                                height="667"
+                                class="h-80 w-full rounded-3xl object-cover object-top dark:grayscale dark:hover:grayscale-0 ease-linear hover:scale-105 transition-all duration-500 group-hover:rounded-xl"
+                        />
+                    </div>
+
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
                         Fourniture de main-d'œuvre
                     </h3>
                 </div>
                 <div class="group space-y-6">
-                    <img
-                            src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-                            alt="art cover"
-                            loading="lazy"
-                            width="1000"
-                            height="667"
-                            class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
-                    />
+                    <div class="overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+                                alt="art cover"
+                                loading="lazy"
+                                width="1000"
+                                height="667"
+                                class="h-80 w-full rounded-3xl object-cover object-top dark:grayscale dark:hover:grayscale-0 ease-linear hover:scale-105 transition-all duration-500 group-hover:rounded-xl"
+                        />
+                    </div>
+
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
                         Service de réparation et d'étalonnage
                     </h3>
                 </div>
                 <div class="group space-y-6">
-                    <img
-                            src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-                            alt="art cover"
-                            loading="lazy"
-                            width="1000"
-                            height="667"
-                            class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
-                    />
+                    <div class="overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+                                alt="art cover"
+                                loading="lazy"
+                                width="1000"
+                                height="667"
+                                class="h-80 w-full rounded-3xl object-cover object-top dark:grayscale dark:hover:grayscale-0 ease-linear hover:scale-105 transition-all duration-500 group-hover:rounded-xl"
+                        />
+                    </div>
+
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
                         Services de formation
                     </h3>
                 </div>
                 <div class="group space-y-6">
-                    <img
-                            src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-                            alt="art cover"
-                            loading="lazy"
-                            width="1000"
-                            height="667"
-                            class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
-                    />
+                    <div class="overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+                                alt="art cover"
+                                loading="lazy"
+                                width="1000"
+                                height="667"
+                                class="h-80 w-full rounded-3xl object-cover object-top dark:grayscale dark:hover:grayscale-0 ease-linear hover:scale-105 transition-all duration-500 group-hover:rounded-xl"
+                        />
+                    </div>
+
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
                         Optimisation des coûts de l'énergie
                     </h3>
